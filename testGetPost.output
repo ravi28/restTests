@@ -1,0 +1,29 @@
+Test 1 - Send Http GET request
+
+Sending 'GET' request to URL : https://api.constantcontact.com/v2/account/info?api_key=9q5v5xkntkang5mzfe3v96k4
+Response Code : 200
+{"website":"","organization_name":"self","time_zone":"US/Eastern","first_name":"Ravi","last_name":"Kumar","email":"mnravi.85@gmail.com","phone":"111-111-1111","company_logo":"","country_code":"US","state_code":"AL","organization_addresses":[]}
+
+Test 2 - Send Http POST request
+
+Sending 'POST' request to URL : https://api.constantcontact.com/v2/account/verifiedemailaddresses?api_key=9q5v5xkntkang5mzfe3v96k4
+Response Code : 400
+Exception in thread "main" java.io.IOException: Server returned HTTP response code: 400 for URL: https://api.constantcontact.com/v2/account/verifiedemailaddresses?api_key=9q5v5xkntkang5mzfe3v96k4
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at sun.net.www.protocol.http.HttpURLConnection$6.run(HttpURLConnection.java:1676)
+	at sun.net.www.protocol.http.HttpURLConnection$6.run(HttpURLConnection.java:1674)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at sun.net.www.protocol.http.HttpURLConnection.getChainedException(HttpURLConnection.java:1672)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1245)
+	at sun.net.www.protocol.https.HttpsURLConnectionImpl.getInputStream(HttpsURLConnectionImpl.java:254)
+	at testGetPost.sendPost(testGetPost.java:85)
+	at testGetPost.main(testGetPost.java:15)
+Caused by: java.io.IOException: Server returned HTTP response code: 400 for URL: https://api.constantcontact.com/v2/account/verifiedemailaddresses?api_key=9q5v5xkntkang5mzfe3v96k4
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1627)
+	at java.net.HttpURLConnection.getResponseCode(HttpURLConnection.java:468)
+	at sun.net.www.protocol.https.HttpsURLConnectionImpl.getResponseCode(HttpsURLConnectionImpl.java:338)
+	at testGetPost.sendPost(testGetPost.java:79)
+	... 1 more
